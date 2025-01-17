@@ -1,10 +1,10 @@
 "use client";
-import Categories from "./admin/_components/Categories" 
+import { Menu } from "./admin/menu/Menu";
 
 export default function Home() {
   return (
     <div>
-      <Categories />
+      <Menu />
     </div>
   );
 }

@@ -1,6 +1,5 @@
 "use client";
 import { useEffect, useState } from "react";
-import { Header } from "./_components/header";
  
 type CategoryType = {
   categoryName: string;
@@ -35,15 +34,16 @@ export default function Home() {
     fetchData();
   })
   return (
+  
     <div>
-        <Header />
       {categories.map((category) => (
         <div key={category._id}> {category.categoryName}
         </div>
       ))}
  
-      <button className="bg-green-400 p-3 mt-2 rounded-lg" onClick={addCategory}> ADD NEW </button>
+      <button className="bg-green-400 p-3 mt-2 rounded-lg" onClick={addCategory}> Add new</button>
     </div>
+
   );
 }
  

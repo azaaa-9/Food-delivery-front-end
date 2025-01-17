@@ -1,12 +1,12 @@
 "use client";
 import { useEffect, useState } from "react";
-import { Header } from "./header";
+import { Badge } from "@/components/ui/badge";
  
 type CategoryType = {
   categoryName: string;
   _id: string;
 }
-export default function Home() {
+export function Categories() {
  
   const [categories, setCategories] = useState<CategoryType[]>([]);
  
@@ -34,17 +34,28 @@ export default function Home() {
  
     fetchData();
   })
+
   return (
-    <div>
-        <Header />
-      {categories.map((category) => (
-        <div key={category._id}> {category.categoryName}
-        </div>
-      ))}
- 
-      <button className="bg-green-400 p-3 mt-2 rounded-lg" onClick={addCategory}> ADD NEW </button>
+    <div className=" w-full p-6 rounded-2xl  flex flex-col gap-4 bg-background ">
+      <h4 className=" text-xl font-semibold  ">Dishes Category</h4>
+      <div className="flex flex-wrap gap-3 cursor-pointer">
+        {categories?.map((category) => {
+          return (
+            <Badge
+              key={category._id}
+              className=" rounded-full border py-2 px-4 flex gap-2 text-sm font-medium text-black bg-white"
+            >
+              {category.categoryName}
+            </Badge>
+          
+          );
+          
+        })}  <button className="bg-red-500 p-2 mt-2 rounded-full" onClick={addCategory}> + </button>
+      </div>
     </div>
+    
   );
-}
+};
+
  
  

@@ -1,13 +1,16 @@
-
+"use client"
 import { Avatar, AvatarFallback, AvatarImage, } from "@/components/ui/avatar";
 import { Truck } from "lucide-react";
 import { Settings } from "lucide-react";
 import { Blocks } from "lucide-react";
+import { useState } from "react";
+
 
 export function Header() {
+  const [activeMenu, setActiveMenu] = useState("Food Menu")
     return (
       <div className="flex h-screen bg-gray-100">
-        <div className="w-1/10 bg-white p-6">
+        <div className="w-1/7 bg-white p-6">
 
 
           <h1 className="text-2xl font-bold text-red-500 flex justify-around">
@@ -17,10 +20,6 @@ export function Header() {
             </svg>
             </span>
             NomNom
-             <Avatar>
-                 <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
-                 <AvatarFallback></AvatarFallback>
-            </Avatar>
           </h1>
    
           <p className="text-gray-500 mt-1">Swift delivery</p>
@@ -28,31 +27,46 @@ export function Header() {
 
           <ul className="mt-6 space-y-6 text-black ">
             <li>
+            <button
+              onClick={() => setActiveMenu("Food menu")}
+              className={`flex gap-x-2.5 w-full text-left px-4 py-2 rounded-full ${
+                activeMenu === "Food menu"
+                  ? "bg-black text-white"
+                  : "hover:text-white hover:bg-black"
+              }`}
+            >
+               <Blocks />
+              Food menu
+            </button>
 
-              <a
-                className="px-4 py-2 rounded-full hover:text-white hover:bg-black flex gap-x-2.5"
-              >
-                <Blocks />
-                Food menu
-              </a>
             </li>
             <li>
-
-              <a
-                className=" px-4 py-2 rounded-full  hover:text-white hover:bg-black flex gap-x-2.5"
-              >
-                <Truck />
-                Orders
-              </a>
+            <button
+              onClick={() => setActiveMenu("Orders")}
+              className={`flex gap-x-2.5 w-full text-left px-4 py-2 rounded-full ${
+                activeMenu === "Orders"
+                  ? "bg-black text-white"
+                  : "hover:text-white hover:bg-black"
+              }`}
+            > 
+            <Truck />
+              Orders
+            </button>
+              
             </li>
             <li>
-
-              <a
-                className="px-4 py-2 rounded-full hover:text-white hover:bg-black flex gap-x-2.5"
-              >
-                <Settings />
-                Settings
-              </a>
+             <button
+              onClick={() => setActiveMenu("Settings")}
+              className={`flex gap-x-2.5 w-full text-left px-4 py-2 rounded-full ${
+                activeMenu === "settings"
+                  ? "bg-black text-white"
+                  : "hover:text-white hover:bg-black"
+              }`}
+            > 
+             <Settings />
+              settings
+            </button>
+             
 
             </li>
           </ul>
