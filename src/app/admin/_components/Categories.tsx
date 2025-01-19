@@ -106,8 +106,8 @@ export function Categories() {
     });
     const data = await response.json();
     setCategories([...categories, data.newItem]);
-    setNewCategoryName(""); // Оруулах талбарыг хоослох
-    setIsDialogOpen(false); // Диалогыг хаах
+    setNewCategoryName(""); 
+    setIsDialogOpen(false); 
   };
 
  
@@ -136,7 +136,6 @@ export function Categories() {
           );
         })}
 
-        {/* Диалог нэмэх хэсэг */}
         <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
           <DialogTrigger asChild>
             <button className="bg-red-500 p-2 mt-2 rounded-full text-white">
