@@ -27,7 +27,6 @@ export default function RootLayout({
     <html>
     <body>
     <div className="bg-muted h-screen flex gap-6  ">
-    {/* <Header /> */}
     {children}
   </div>
   </body>

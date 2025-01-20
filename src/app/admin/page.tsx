@@ -1,7 +1,8 @@
+
 import { Menu } from "./menu/Menu"
 
-export function Home() {
+export default function Home() {
   return(
-    <div><Menu  /></div>
+    <div><Menu /></div>
   )
 }

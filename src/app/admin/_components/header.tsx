@@ -9,6 +9,7 @@ import { useState } from "react";
 export function Header() {
   const [activeMenu, setActiveMenu] = useState("Food Menu")
     return (
+   
       <div className="flex h-screen bg-gray-100">
         <div className="w-1/7 bg-white p-6">
 
@@ -73,6 +74,6 @@ export function Header() {
         </div>
 
        </div>
- 
+      
     );
   }
