@@ -49,6 +49,9 @@ import { Dishes } from "./dishes";
               <Plus />
             </Button>
           </DialogTrigger>
+
+
+          
           <div className="text-center text-sm font-medium mt-6 ">
             <h4>Add new Dish to </h4>
             <h4>{categoryName}</h4>
@@ -58,6 +61,9 @@ import { Dishes } from "./dishes";
           <DialogHeader className="pb-4 grid gap-4">
             <DialogTitle>Add new dish to {categoryName}</DialogTitle>
           </DialogHeader>
+
+
+
           <div className="flex gap-6">
             <div className="grid w-full max-w-sm items-center gap-1.5">
               <Label htmlFor="foodName">Food name</Label>
@@ -70,6 +76,8 @@ import { Dishes } from "./dishes";
                 onChange={onChange}
               />
             </div>
+
+
             <div className="grid w-full max-w-sm items-center gap-1.5">
               <Label htmlFor="foodPrice">Food price</Label>
               <Input
@@ -81,6 +89,9 @@ import { Dishes } from "./dishes";
               />
             </div>
           </div>
+
+
+
           <div className="flex flex-col w-full  gap-1.5">
             <Label htmlFor="ingredients">Ingredients</Label>
             <textarea
@@ -93,13 +104,17 @@ import { Dishes } from "./dishes";
               onChange={onChange}
             ></textarea>
           </div>
+
+          
           <div className="grid w-full items-center gap-1.5">
             <h1 className="text-sm">Food image</h1>
             {food.image !== "" ? (
               <div
                 className={`bg-cover bg-center rounded-md h-[138px] `}
-                style={{ backgroundImage: `url(${food.image})` }}
-              ></div>
+                style={{ backgroundImage: `url(${food.image})` }}>
+              </div>
+
+
             ) : (
               <Label
                 htmlFor="image"
@@ -111,6 +126,8 @@ import { Dishes } from "./dishes";
                 <h3 className="text-sm">Choose a file or drag & drop it here</h3>
               </Label>
             )}
+
+
    
             <Input
               id="image"

@@ -13,21 +13,22 @@ import { Categories } from './_components/Categories'
     children: React.ReactNode
   }) {
     return (
-      <ClerkProvider>
+      // <ClerkProvider>
 
-            <SignedOut>
-              <SignInButton />
-            </SignedOut>
+      //       <SignedOut>
+      //         <SignInButton />
+      //       </SignedOut>
 
-            <SignedIn>
-              <UserButton />
-              <div className="bg-muted h-screen flex gap-6  ">
-             <Header />
+      //       <SignedIn>
+      //         <UserButton />
+            
+      //       </SignedIn>
+
+      // </ClerkProvider>  
+             <div className="bg-muted h-screen flex gap-6  ">
+              <Header />
              {children}
         </div>
-            </SignedIn>
-
-      </ClerkProvider>
     )
   }
    

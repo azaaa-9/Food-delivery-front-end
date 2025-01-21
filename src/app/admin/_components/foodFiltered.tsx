@@ -53,7 +53,7 @@ export const FilteredFood = ({ _id, categoryName }: CategoryType) => {
       data.append("upload_preset", "food-delivery");
  
       const response = await fetch(
-        `https://api.cloudinary.com/v1_1/dg1tgxuba/upload`,
+        `https://api.cloudinary.com/v1_1/dxlyq30ge/upload`,
         {
           method: "POST",
           body: data,
@@ -64,7 +64,7 @@ export const FilteredFood = ({ _id, categoryName }: CategoryType) => {
       setFood((prev: any) => ({ ...prev, image: dataJson.secure_url }));
     }
   };
- 
+
   return (
     <div className="w-full p-5 flex flex-col gap-5 rounded-xl bg-background">
       <h4 className=" text-xl font-semibold  ">{categoryName}</h4>

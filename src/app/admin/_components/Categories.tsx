@@ -64,9 +64,10 @@ export function Categories() {
               +
             </button>
           </DialogTrigger>
-          <DialogContent>
-            <DialogHeader>
-              <DialogTitle></DialogTitle>
+          <DialogContent className="text-[#09090B] text-2xl">
+            Add new category
+            <DialogHeader> 
+              <DialogTitle className="text-[#09090B] text-sm">Category name</DialogTitle>
             </DialogHeader>
             <div className="flex flex-col gap-4">
               <Input
@@ -77,9 +78,9 @@ export function Categories() {
             </div>
             <DialogFooter>
               <Button variant="outline" onClick={() => setIsDialogOpen(false)}>
-                Болих
+                Back
               </Button>
-              <Button onClick={addCategory}>Нэмэх</Button>
+              <Button onClick={addCategory}>ADD</Button>
             </DialogFooter>
           </DialogContent>
         </Dialog>

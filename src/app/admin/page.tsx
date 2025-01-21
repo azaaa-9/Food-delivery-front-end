@@ -1,8 +1,8 @@
-
-import { Menu } from "./menu/Menu"
-
+import { Categories } from "./_components/Categories"
 export default function Home() {
-  return(
-    <div><Menu /></div>
-  )
+    return(
+        <div>
+            <Categories />
+        </div>
+    )
 }
