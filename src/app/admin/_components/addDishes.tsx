@@ -51,7 +51,7 @@ import { Dishes } from "./dishes";
           </DialogTrigger>
 
 
-          
+
           <div className="text-center text-sm font-medium mt-6 ">
             <h4>Add new Dish to </h4>
             <h4>{categoryName}</h4>
@@ -118,12 +118,11 @@ import { Dishes } from "./dishes";
             ) : (
               <Label
                 htmlFor="image"
-                className={`h-[138px] border border-dashed rounded-md bg-blue-50 flex flex-col items-center justify-center p-4 gap-2`}
-              >
-                <div className="rounded-full p-2 bg-background ">
+                className={`h-[138px] border border-dashed rounded-md bg-blue-50 flex flex-col items-center justify-center p-4 gap-2 cursor-pointer`}>
+                <div className="rounded-full p-2 bg-background">
                   <Image />
                 </div>
-                <h3 className="text-sm">Choose a file or drag & drop it here</h3>
+                <h3 className="text-sm cursor-pointer">Choose a file or drag & drop it here</h3>
               </Label>
             )}
 
