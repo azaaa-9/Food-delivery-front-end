@@ -24,7 +24,7 @@ export default function Home () {
       <Orders />
       </div>
       
-      <Pagination className="grid justify-end p-5   ">
+      <Pagination className="grid justify-end py-24  ">
   <PaginationContent>
 
     <PaginationItem>
@@ -48,8 +48,13 @@ export default function Home () {
     </PaginationItem>
 
     <PaginationItem>
+      <PaginationLink href="#">10</PaginationLink>
+    </PaginationItem>
+
+    <PaginationItem>
       <PaginationNext href="#" />
     </PaginationItem>
+
   </PaginationContent>
 </Pagination>
       </div>
