@@ -8,6 +8,7 @@ import { useState } from "react";
 
 export function Header() {
   const [activeMenu, setActiveMenu] = useState("Food Menu")
+  const [order, SetOrder] = useState('order')
     return (
    
       <div className="flex h-screen bg-gray-100">
