@@ -19,7 +19,19 @@ export default function App() {
       <div className="text-[30px] font-[600] text-black ml-16 h-[500px] justify-center">
         {" "}
         Categories
-        <Categories />
+        <div className="text-xl pt-10 flex gap-10">
+          <p className="bg-red-500">Appetizers</p>
+          <p className="border rounded-full ">Salads</p>
+          <p>Pizzas</p>
+          <p>Side dish</p>
+          <p>Brunch</p>
+          <p>Luch favorites</p>
+          <p>Desserts</p>
+          <p>Main Dishes</p>
+          <p>Fish & Sea foods</p>
+          <p>Beverages</p>
+
+        </div>
       </div>
    
 
