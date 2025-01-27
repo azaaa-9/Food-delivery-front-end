@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import {Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger, DialogFooter,} from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import { Plus } from "lucide-react";
 
 
 type CategoryType = {
@@ -60,9 +61,9 @@ export function Categories() {
 
         <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
           <DialogTrigger asChild>
-            <button className="bg-red-500 p-2 mt-2 rounded-full text-white">
-              +
-            </button>
+          <Button variant="destructive" className="rounded-full p-[10px]">
+              <Plus />
+            </Button>
           </DialogTrigger>
           <DialogContent className="text-[#09090B] text-2xl">
             Add new category

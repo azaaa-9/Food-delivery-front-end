@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import { FilteredFood } from "./foodFiltered";
+import { FilteredFood } from "./FoodCard";
 import { useParams } from "next/navigation";
  
 export type CategoryType = {

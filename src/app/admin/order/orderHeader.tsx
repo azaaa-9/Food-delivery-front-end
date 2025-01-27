@@ -1,4 +1,8 @@
+"use client";
 import { CalendarDays } from "lucide-react";
+import { Calendar } from "@/components/ui/calendar";
+import { Prompt } from "next/font/google";
+
 export function OrderHeader() {
   return (
     <div className="grid grid-cols-1">
@@ -9,14 +13,17 @@ export function OrderHeader() {
         </div>
         <div className="flex items-center space-x-4">
           <div className="flex items-center bg-white rounded-gray px-4 py-2 rounded-full border border-[#E4E4E7]">
-            <CalendarDays className="size-[16px] mr-2" />
+            <CalendarDays onClick={alert} className="size-[16px] mr-2" />
           </div>
-          <button className="bg-gray-800 hover:bg-gray-700 text-white text-[14px] font-[500] px-4 py-2 rounded-full">
+          <button
+            onClick={alert}
+            className="bg-gray-800 hover:bg-gray-700 text-white text-[14px] font-[500] px-4 py-2 rounded-full"
+          >
             Change delivery state
           </button>
         </div>
       </div>
- 
+
       <div className="space-y-4 bg-white">
         <div className="grid grid-cols-9 items-center gap-6 border border-gray-200 p-2 ">
           <input type="checkbox" className="col-span-1 w-4 h-4" />
@@ -32,5 +39,3 @@ export function OrderHeader() {
     </div>
   );
 }
- 
- 

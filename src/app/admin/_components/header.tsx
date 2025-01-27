@@ -1,8 +1,9 @@
 "use client"
-import { Avatar, AvatarFallback, AvatarImage, } from "@/components/ui/avatar";
+
 import { Truck } from "lucide-react";
 import { Settings } from "lucide-react";
 import { Blocks } from "lucide-react";
+import Link from "next/link";
 import { useState } from "react";
 
 
@@ -29,6 +30,7 @@ export function Header() {
 
           <ul className="mt-6 space-y-6 text-black ">
             <li>
+              <Link href={"/admin/menu"}>
             <button
               onClick={() => setActiveMenu("Food menu")}
               className={`flex gap-x-2.5 w-full text-left px-4 py-2 rounded-full ${
@@ -39,12 +41,13 @@ export function Header() {
             >
                <Blocks />
               Food menu
-            </button>
+            </button></Link>
 
             </li>
             <li>
+              <Link href={"/admin/order"}>
             <button
-              onClick={() => setActiveMenu("Orders")}
+              onClick={() => setActiveMenu("Order")}
               className={`flex gap-x-2.5 w-full text-left px-4 py-2 rounded-full ${
                 activeMenu === "Orders"
                   ? "bg-black text-white"
@@ -54,6 +57,7 @@ export function Header() {
             <Truck />
               Orders
             </button>
+            </Link>
               
             </li>
             <li>

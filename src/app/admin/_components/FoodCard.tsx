@@ -2,9 +2,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { CategoryType } from "./dishes";
- 
 import { Card } from "@/components/ui/card";
-import { Dishes } from "./dishes";
 import { CardComp } from "./card";
 import { AddDish } from "./addDishes";
  

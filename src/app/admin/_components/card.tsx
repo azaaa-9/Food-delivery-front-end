@@ -13,7 +13,7 @@ import {
 } from "@/components/ui/dialog";
 import { Label } from "@radix-ui/react-label";
 import { Input } from "@/components/ui/input";
- 
+
 export const CardComp = ({ food, id, onChange, handleUpload }: any) => {
   const [editFood, setEditFood] = useState({
     name: "",
@@ -22,9 +22,9 @@ export const CardComp = ({ food, id, onChange, handleUpload }: any) => {
     image: "",
     category: id,
   });
- 
+
   console.log(editFood);
-  console.log(food.name)
+  console.log(food.name);
   return (
     <Card className="border bg-background p-4 w-[270.75px] h-[241px] flex flex-col gap-5 items-center  justify-center">
       <div
@@ -33,12 +33,10 @@ export const CardComp = ({ food, id, onChange, handleUpload }: any) => {
       >
         <Dialog>
           <DialogTitle className=" text-center ">
-            
-            <DialogTrigger
-              asChild
-              className=" w-6 h-6 bg-white rounded-full p-3"
-            >
-              <Pencil color="red" />
+            <DialogTrigger asChild>
+              <button className=" w-10 h-10 bg-white rounded-full p-3 text-red-500 items-center flex">
+                <Pencil />
+              </button>
             </DialogTrigger>
           </DialogTitle>
           <DialogContent className="flex flex-col gap-6 p-6">
@@ -48,9 +46,9 @@ export const CardComp = ({ food, id, onChange, handleUpload }: any) => {
             <div className="flex">
               <Label htmlFor="foodName">Food name</Label>
               <Input
-                value={food?.name}
                 id="foodName"
                 name="name"
+                value={food?.foodName}
                 type="text"
                 onChange={onChange}
                 placeholder="Type food name..."
@@ -81,21 +79,19 @@ export const CardComp = ({ food, id, onChange, handleUpload }: any) => {
             <div className="grid w-full items-center gap-1.5">
               <h1 className="text-sm">Food image</h1>
 
-
-
               {food?.image !== "" ? (
                 <div
                   className={`bg-cover bg-center rounded-md h-[138px] flex justify-end p-4 `}
-                  style={{ backgroundImage: `url(${food.image})` }}>
+                  style={{ backgroundImage: `url(${food.image})` }}
+                >
                   <Button
                     variant="outline"
                     className="rounded-full px-3 py-5"
-                    onClick={() => {}}>
+                    onClick={() => {}}
+                  >
                     <X />
                   </Button>
                 </div>
-
-
               ) : (
                 <Label
                   htmlFor="image"
@@ -107,7 +103,7 @@ export const CardComp = ({ food, id, onChange, handleUpload }: any) => {
                   </h3>
                 </Label>
               )}
- 
+
               <Input
                 id="image"
                 name="image"
@@ -116,8 +112,10 @@ export const CardComp = ({ food, id, onChange, handleUpload }: any) => {
                 className="hidden"
               />
             </div>
-            <DialogFooter className="pt-6 flex justify-center">
-              <Trash className="text-red-500"/> 
+            <DialogFooter className="pt-6 flex justify-between">
+              <Button>
+                <Trash className="text-red-500" />
+              </Button>
               <DialogClose asChild>
                 <Button>Save Changes</Button>
               </DialogClose>
@@ -127,7 +125,7 @@ export const CardComp = ({ food, id, onChange, handleUpload }: any) => {
       </div>
       <div className="grid gap-2">
         <div className="flex justify-between">
-          <span className="text-red-500 ">{food.name}</span>
+          <span className="text-red-500 ">{food?.foodName}</span>
           <span>${food.price}</span>
         </div>
         <h4 className="text-xs">{food.ingredients}</h4>
@@ -135,4 +133,3 @@ export const CardComp = ({ food, id, onChange, handleUpload }: any) => {
     </Card>
   );
 };
- 
