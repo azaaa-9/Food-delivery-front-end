@@ -64,7 +64,8 @@ export const FilteredFood = ({ _id, categoryName }: CategoryType) => {
   };
 
   return (
-    <div className="w-full p-5 flex flex-col gap-5 rounded-xl bg-background">
+    <div className="flex justify-center mt-8">
+    <div className="w-11/12 p-5 flex flex-col gap-5 rounded-xl bg-background">
       <h4 className=" text-xl font-semibold  ">{categoryName}</h4>
       <div className="flex flex-wrap gap-4">
         <Card className="border border-dashed border-red-500 px-2 py-4 w-[270.75px] h-[241px] flex flex-col items-center  justify-center ">
@@ -90,6 +91,7 @@ export const FilteredFood = ({ _id, categoryName }: CategoryType) => {
             )
         )}
       </div>
+    </div>
     </div>
   );
 };

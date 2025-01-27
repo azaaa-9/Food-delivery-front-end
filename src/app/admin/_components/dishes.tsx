@@ -2,12 +2,12 @@
 import { useEffect, useState } from "react";
 import { FilteredFood } from "./FoodCard";
 import { useParams } from "next/navigation";
- 
+
 export type CategoryType = {
   categoryName: string;
   _id: string;
 };
- 
+
 export const Dishes = () => {
   const [foodCategory, setFoodCategory] = useState<CategoryType[]>();
   const params = useParams();
@@ -17,10 +17,9 @@ export const Dishes = () => {
       const data = await response.json();
       setFoodCategory(data);
     };
- 
+
     fetchCategory();
   }, []);
- 
 
   return (
     <div className="flex flex-col gap-5">
@@ -46,4 +45,3 @@ export const Dishes = () => {
     </div>
   );
 };
- 

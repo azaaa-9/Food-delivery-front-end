@@ -23,7 +23,6 @@ export const CardComp = ({ food, id, onChange, handleUpload }: any) => {
     category: id,
   });
 
-  console.log(editFood);
   console.log(food.name);
   return (
     <Card className="border bg-background p-4 w-[270.75px] h-[241px] flex flex-col gap-5 items-center  justify-center">
@@ -48,7 +47,7 @@ export const CardComp = ({ food, id, onChange, handleUpload }: any) => {
               <Input
                 id="foodName"
                 name="name"
-                value={food?.foodName}
+                value={food?.name}
                 type="text"
                 onChange={onChange}
                 placeholder="Type food name..."
@@ -124,9 +123,9 @@ export const CardComp = ({ food, id, onChange, handleUpload }: any) => {
         </Dialog>
       </div>
       <div className="grid gap-2">
-        <div className="flex justify-between">
-          <span className="text-red-500 ">{food?.foodName}</span>
-          <span>${food.price}</span>
+        <div className="flex justify-between gap-8">
+          <span className="text-red-500 ">{food?.name}</span>
+          <span className="text-[#09090B]">${food.price}</span>
         </div>
         <h4 className="text-xs">{food.ingredients}</h4>
       </div>

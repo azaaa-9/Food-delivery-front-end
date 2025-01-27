@@ -54,7 +54,7 @@ export const AddDish = ({
           <h4>{categoryName}</h4>
         </div>
       </DialogTitle>
-      <DialogContent className="flex flex-col gap-6 p-6">
+      <DialogContent className="flex flex-col gap-6 p-6 ">
         <DialogHeader className="pb-4 grid gap-4">
           <DialogTitle>Add new dish to {categoryName}</DialogTitle>
         </DialogHeader>
@@ -63,7 +63,7 @@ export const AddDish = ({
           <div className="grid w-full max-w-sm items-center gap-1.5">
             <Label htmlFor="foodName">Food name</Label>
             <Input
-              value={food?.foodName}
+              value={food?.name}
               id="foodName"
               name="name"
               type="text"

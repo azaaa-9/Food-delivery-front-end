@@ -1,35 +1,29 @@
 import {
-    ClerkProvider,
-    SignInButton,
-    SignedIn,
-    SignedOut,
-    UserButton
-  } from '@clerk/nextjs'
-  import { Header } from './_components/header'
-import { Categories } from './_components/Categories'
-  export default function Layout({
-    children,
-  }: {
-    children: React.ReactNode
-  }) {
-    return (
-      // <ClerkProvider>
+  ClerkProvider,
+  SignInButton,
+  SignedIn,
+  SignedOut,
+  UserButton,
+} from "@clerk/nextjs";
+import { Header } from "./_components/header";
+import { Categories } from "./_components/Categories";
+export default function Layout({ children }: { children: React.ReactNode }) {
+  return (
+    // <ClerkProvider>
 
-      //       <SignedOut>
-      //         <SignInButton />
-      //       </SignedOut>
+    //       <SignedOut>
+    //         <SignInButton />
+    //       </SignedOut>
 
-      //       <SignedIn>
-      //         <UserButton />
-            
-      //       </SignedIn>
+    //       <SignedIn>
+    //         <UserButton />
 
-      // </ClerkProvider>  
-             <div className="bg-muted h-screen flex gap-6  ">
-              <Header />
-             {children}
-        </div>
-    )
-  }
-   
- 
+    //       </SignedIn>
+
+    // </ClerkProvider>
+    <div className="bg-muted h-screen flex gap-6  ">
+      <Header />
+      {children}
+    </div>
+  );
+}

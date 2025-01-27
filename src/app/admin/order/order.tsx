@@ -1,6 +1,6 @@
-"use client"
+"use client";
 import { useState, useEffect } from "react";
- 
+
 type Users = {
   email: string;
   _id: number;
@@ -15,12 +15,12 @@ type Users = {
   ingredients: string;
   price: number;
 };
- 
+
 export function Orders() {
   const [status, setStatus] = useState("");
   const [borderColor, setBorderColor] = useState("border-yellow-500");
   const [user, setUser] = useState<Users[]>([]);
- 
+
   async function fetchAll() {
     const res = await fetch(`http://localhost:5000/users`, {
       method: "GET",
@@ -29,15 +29,15 @@ export function Orders() {
         "Content-Type": "application/json",
       },
     });
- 
+
     const data = await res.json();
     setUser(data);
   }
- 
+
   useEffect(() => {
     fetchAll();
   }, []);
- 
+
   const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const selectedValue = event.target.value;
     setStatus(selectedValue);
@@ -49,7 +49,7 @@ export function Orders() {
       setBorderColor("border-black");
     }
   };
- 
+
   return (
     <div>
       <div className="space-y-4">
@@ -66,14 +66,14 @@ export function Orders() {
             <span className="col-span-1 text-[#71717A] ">
               {user.orderedFoods}
             </span>
- 
+
             <span className="col-span-1  text-[#71717A]">
               {new Date(user.ttl).toLocaleDateString()}
             </span>
- 
+
             <span className="col-span-1 text-[#71717A]">${user.price}</span>
             <span className="col-span-1 text-[#71717A]">{user.address}</span>
- 
+
             <select
               value={status}
               onChange={handleChange}
@@ -89,5 +89,3 @@ export function Orders() {
     </div>
   );
 }
- 
- 
