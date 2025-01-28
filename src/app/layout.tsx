@@ -26,7 +26,7 @@ export default function RootLayout({
   return (
     <html>
     <body>
-    <div className="bg-muted h-screen flex gap-6  ">
+    <div className="bg-muted h-screen flex gap-6 ">
     {children}
   </div>
   </body>

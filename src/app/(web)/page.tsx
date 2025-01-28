@@ -11,29 +11,28 @@ export default function App() {
       <div className="w-[full] h-[68px] bg-[#18181B] flex items-center justify-between  ">
         <img className="w-[146px] h-[44px] ml-16 " src="Logo.png" />
         <div className=" flex  mr-16 gap-4">
-          <ShoppingCart className="text-black bg-white rounded-full"/>
+          <ShoppingCart className="text-black bg-white rounded-full  "/>
           <User className="text-black bg-[#EF4444] rounded-full"/>
         </div>
       </div>
-      <img className="w-full h-aut" src="BG.png" />
-      <div className="text-[30px] font-[600] text-black ml-16 h-[500px] justify-center">
-        {" "}
+      <img className="w-full h-[500]" src="BG.png" />
+      <div className="text-[30px] font-[600] text-black ml-16 w-full justify-center ">
         Categories
-        <div className="text-xl pt-10 flex gap-10">
-          <p className="bg-red-500">Appetizers</p>
-          <p className="border rounded-full ">Salads</p>
-          <p>Pizzas</p>
-          <p>Side dish</p>
-          <p>Brunch</p>
-          <p>Luch favorites</p>
-          <p>Desserts</p>
-          <p>Main Dishes</p>
-          <p>Fish & Sea foods</p>
-          <p>Beverages</p>
+        <div className="text-xl pt-10 flex gap-8 text-center ">
+          <p className="bg-red-500 border border-solid-1px rounded-full p-2">Appetizers</p>
+          <p className="border rounded-full border-solid-1px p-2">Salads</p>
+          <p className="border rounded-full border-solid-1px p-2">Pizzas</p>
+          <p className="border rounded-full border-solid-1px p-2">Side dish</p>
+          <p className="border rounded-full border-solid-1px p-2">Brunch</p>
+          <p className="border rounded-full border-solid-1px p-2">Luch favorites</p>
+          <p className="border rounded-full border-solid-1px p-2">Desserts</p>
+          <p className="border rounded-full border-solid-1px p-2">Main Dishes</p>
+          <p className="border rounded-full border-solid-1px p-2">Fish & Sea foods</p>
+          <p className="border rounded-full border-solid-1px p-2">Beverages</p>
 
         </div>
       </div>
-   
+
 
       <div className="bg-white w-[400px] h-[350px] rounded-3xl shadow-lg">
         <img
