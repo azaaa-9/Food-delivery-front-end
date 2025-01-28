@@ -38,6 +38,7 @@ export const AddDish = ({
       method: "POST",
       body: JSON.stringify(food),
     });
+    window.location.reload()
   };
 
   return (

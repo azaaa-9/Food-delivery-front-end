@@ -35,6 +35,7 @@ export function Categories() {
     setCategories([...categories, data.newItem]);
     setNewCategoryName("");
     setIsDialogOpen(false);
+    window.location.reload()
   };
 
   useEffect(() => {
@@ -56,7 +57,7 @@ export function Categories() {
           return (
             <Badge
               key={category._id}
-              className="rounded-full border py-2 px-4 flex gap-2 text-sm font-medium text-black bg-white"
+              className="rounded-full border border-solid-1px hover:bg-slate-100 cursor-pointer py-2 px-4 flex gap-2 text-sm font-medium text-black bg-white"
             >
               {category.categoryName}
             </Badge>
