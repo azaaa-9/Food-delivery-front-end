@@ -30,8 +30,15 @@ export default function App() {
                   <ShoppingCart />
                   Order detail
                 </SheetTitle>
-                <SheetDescription className="text-2xl text-black border border-solid rounded-full flex bg-white justify-center">
-                  Cart Order
+                <SheetDescription className="text-2xl text-black border border-solid rounded-full flex bg-white justify-evenly gap-y-7">
+
+                  <button className="border border-solid p-1 rounded-full hover:bg-red-500 w-[50%]">
+                    Cart
+                  </button>
+                  <button className="border border-solid p-1 rounded-full hover:bg-red-500 w-[50%]">
+                    order
+                  </button>
+
                 </SheetDescription>
               </SheetHeader>
             </SheetContent>
